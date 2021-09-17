@@ -1,0 +1,300 @@
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="//cdn.web-fonts.ge/fonts/alk-rounded-mtav-med/css/alk-rounded-mtav-med.min.css">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="//cdn.web-fonts.ge/fonts/bpg-banner-caps/css/bpg-banner-caps.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//cdn.web-fonts.ge/fonts/alk-rounded-nusx-med/css/alk-rounded-nusx-med.min.css">
+</head>
+
+<body>
+    <div id="introduction" class="pageWrapper">
+        <img id="introImg" src="./img/main logo.png" alt="" class="center"></img><br>
+        <button id="introButton">კითხვარის <br>დაწყება</button>
+    </div>
+    <div id="identification" class="pageWrapper">
+        <div class="row">
+            <div class="column">
+
+                <form id="identificationForm">
+                    <div class="redbery">REDBERY</div>
+                    <div class="inputContainer" data-errorName="*" id="nameError">
+                        <label for="name1" class="name-label">სახელი*</label><br>
+                        <input type="text" id="name1" value=""><br>
+                    </div>
+                    <br>
+                    <div class="inputContainer" data-errorName="*" id="surnameError">
+                        <label for="surname" class="name-label">გვარი*</label><br>
+                        <input type="text" id="surname" value=""><br>
+                    </div>
+                    <br>
+                    <div class="inputContainer" data-errorName="*" id="imailError">
+                        <label for="imail" class="name-label">იმეილი*</label><br>
+                        <input type="mail" id="imail" value=""><br>
+                    </div><br>
+                    <div style="height: 10%;"></div>
+                    <hr id="hr1">
+                    <p>*-ით მონიშნული ველების შევსება სავალდებულოა</p>
+                </form>
+
+            </div>
+            <div class="column">
+                <div class="rightTop">
+                    <h2>1/4</h2>
+                    <hr>
+                </div>
+                <div class="imgInmate1 rect"></div>
+                    <img class="backImg imgInmate" id="identificationImg" src="./img/scan2.png" alt=""></img>
+                <div class="buttonContainerNext">
+                    <button style="border:none; background: none;" class="fas fa-chevron-right" id="identificationNext"
+                        class="next"></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div id="covid19" class="pageWrapper">
+        <div class="row">
+            <div class="column">
+                <div class="redbery">REDBERY</div>
+                <form id="covid19Form" noValidate="false">
+                    <h1>გააქვს გადატანილი კოვიდ 19?</h1>
+                    <input id="yes" type="radio" class="radioButton" name="covid" value="yes" />
+                    <label for="yes" class="radioLabel">კი</label><br>
+                    <input id="no" type="radio" class="radioButton" name="covid" value="no" />
+                    <label for="no" class="radioLabel">არა</label><br>
+                    <input id="now" type="radio" class="radioButton" name="covid" value="now" />
+                    <label for="now" class="radioLabel">ახლა მაქვს</label><br>
+                    <div id="test">
+                        <form>
+                            <h1>შემთხვევით ანტისხეულების ტესტი ხომ არ გაქვს გაკეთებული</h1>
+                            <input id="tYes" type="radio" class="radioButton" name="test" value="yes" />
+                            <label for="tYes" class="radioLabel">კი</label><br>
+                            <input id="tNo" type="radio" class="radioButton" name="test" value="no" />
+                            <label for="tNo" class="radioLabel">არა</label><br>
+                        </form>
+                    </div>
+                    <form id="testResults">
+                        <h1>თუ გახსოვს, გთხოვ მიუთითე, მიახლოებითი თარიღი (დღე/თვე/წელი) და რაოდენობა ანტისხეულების</h1>
+                        <div class="inputContainer" data-errorName="*" id="dateAError" style="height: 30px;">
+                            <input type="text" id="dateA" value="" placeholder="დდ/თთ/წწ" required /><br>
+                        </div><br>
+                        <div class="inputContainer" data-errorName="*" id="numberAError" style="height: 30px;">
+                            <input type="number" id="numberA" pattern="[0-9]*" value=""
+                                placeholder="ანტისხეულების რაოდენობა" required><br>
+                        </div>
+                    </form>
+
+                    <form id="anti">
+                        <h1>მიუთითე მიახლოებითი პერიოდი (დღე/თვე/წელი), როდის გქონდა კოვიდ19</h1>
+                        <div class="inputContainer" data-errorName="*" id="dateBError">
+                            <input type="text" id="dateB" value="" placeholder="დდ/თთ/წწ" required /><br>
+                        </div>
+                    </form>
+                </form>
+                <div class="buttonContainerPrevious">
+                    <button style="border:none; background: none;" class="fas fa-chevron-left" type="button"
+                        id="covid19Previus"></button>
+
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="rightTop">
+                    <h2>2/4</h2>
+                    <hr>
+                </div>
+                <div class="circle imgInmate1"></div>
+                <img class="imgInmate" id="" src="./img/vaccinate2.png" alt=""></img>
+                <div class="buttonContainerNext">
+                    <button style="border:none; background: none;" class="fas fa-chevron-right" type="button"
+                        id="covid19Button" disabled="true"></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="vaccinated" class="pageWrapper">
+        <div class="row">
+            <div class="column">
+                <div class="redbery">REDBERY</div>
+                <form id="vaccinatedForm" noValidate="false">
+                    <h1>უკვე აცრილი ხარ?</h1>
+                    <input id="vYes" type="radio" class="radioButton" name="vaccinated" value="vYes" />
+                    <label for="vYes" class="radioLabel">კი</label><br>
+                    <input id="vNo" type="radio" class="radioButton" name="vaccinated" value="vNo" />
+                    <label for="vNo" class="radioLabel">არა</label><br>
+                    <div id="vaccinatedNumber">
+                        <form>
+                            <h1>აირჩიე რომელ ეტაპზე ხარ:</h1>
+                            <input id="firstSecond" type="radio" class="radioButton" name="vaccinatedNumb"
+                                value="firstSecond" />
+                            <label for="firstSecond" class="radioLabel">პირველი დოზა და დარეგისტრირებული ვარ
+                                მეორეზე</label><br>
+                            <input id="both" type="radio" class="radioButton" name="vaccinatedNumb" value="both" />
+                            <label for="both" class="radioLabel">სრულად ვაქცინირებული ვარ</label><br>
+                            <input id="first" type="radio" class="radioButton" name="vaccinatedNumb" value="first" />
+                            <label for="first" class="radioLabel">პირველი დოზა და არ დავრეგისტრირებულვარ
+                                მეორეზე</label><br>
+                        </form>
+                        <div id="booking" class="hint"><i class="fas fa-hand-point-right"></i> რომ აღარ გადადო, ბარემ
+                            ახლავე
+                            დარეგისტრირდი <br><a id="bookingMoh" href="https://booking.moh.gov.ge/" target="_blank">
+                                [https://booking.moh.gov.ge/]</a>
+                        </div>
+                    </div>
+                    <div id="notVaccinated">
+                        <form>
+                            <h1>რას ელოდები?:</h1>
+                            <input id="registered" type="radio" class="radioButton" name="noVaccinated"
+                                value="registered" />
+                            <label for="registered" class="radioLabel">დარეგისტრირებული ვარ და ველოდები
+                                თარიღს</label><br>
+                            <input id="notPlanning" type="radio" class="radioButton" name="noVaccinated"
+                                value="notPlanning" />
+                            <label for="notPlanning" class="radioLabel">არ ვგეგმავ</label><br>
+                            <input id="recovered" type="radio" class="radioButton" name="noVaccinated"
+                                value="recovered" />
+                            <label for="recovered" class="radioLabel">გადატანილი მაქვს და ვგეგმავ აცრას</label><br>
+                        </form>
+                        <a id="bookingMoh1" href="https://booking.moh.gov.ge/" target="_blank" class="hint"><i
+                                class="fas fa-hand-point-right"></i>
+                            [https://booking.moh.gov.ge/]</a>
+                    </div>
+                    <div id="bookingMoh2" class="hint">ახალი პროტოკოლით კოვიდის გადატანიდან 1 თვის შემდეგ შეგიძლიათ
+                        ვაქცინის
+                        გაკეთება.
+                        <i class="fas fa-hand-point-right"></i><a id="" href="https://booking.moh.gov.ge/"
+                            target="_blank"> [https://booking.moh.gov.ge/]</a>
+                    </div>
+                </form>
+                <div class="buttonContainerPrevious">
+                    <button style="border:none; background: none;" class="fas fa-chevron-left" type="button"
+                        id="vaccinatedPrevius"></button>
+                </div>
+            </div>
+            <div class="column">
+                <div class="rightTop">
+                    <h2>3/4</h2>
+                    <hr>
+                </div>
+                <img class="imgInmate1 topImg" id="" src="./img/star.png" alt=""></img>
+                <img class="imgInmate backImg" id="" src="./img/doctor2.png" alt=""></img>
+                <div class="buttonContainerNext">
+
+                    <button style="border:none; background: none;" class="fas fa-chevron-right" type="button"
+                        id="vaccinatedButton" disabled="true"></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="recomendations" class="pageWrapper">
+        <div class="row">
+            <div class="column" style="overflow: scroll;">
+                <div class="redbery">REDBERY</div>
+                <p class="staff">რედბერის მთავარი ღირებულება ჩვენი გუნდის თითოეული წევრია. გარემო, რომელსაც ჩვენი
+                    თანამშრომლები ქმნით
+                    ბევრისთვის არის და ყოფილა წლების განმავლობაში ერთად მიზნებისთვის ბრძოლის მიზეზი,
+                    ბევრისთვის კი - ჩვენთან გადმოსვლის. </p>
+                <p class="staff">პანდემიის პერიოდში ერთმანეთსაც იშვიათად ვნახულობთ
+                    პირისპირ და ყოველდღიური კომუნიკაციაც გაიშვიათდა.</p>
+                <form id="recomendationsForm" action="">
+                    <div id="onlineMeetings">
+                        <h1>რა სიხშირით შეიძლება გვქონდეს საერთო არაფორმალური ონლაინ შეხვედრები,
+                            სადაც ყველა სურვილისამებრ ჩაერთვება?*</h1>
+                        <input id="twiceWeek" type="radio" class="radioButton" name="onlineMeeting" value="twiceWeek"
+                            oninvalid="this.setCustomValidity('აირჩიეთ ერთ-ერთი')" onclick="clearValidity();"
+                            required />
+                        <label for="twiceWeek" class="radioLabel">კვირაში ორჯერ</label><br>
+                        <input id="onceWeek" type="radio" class="radioButton" name="onlineMeeting" value="onceWeek"
+                            onclick="clearValidity();" />
+                        <label for="onceWeek" class="radioLabel">კვირაში ერთხელ</label><br>
+                        <input id="twoWeeks" type="radio" class="radioButton" name="onlineMeeting" value="twoWeeks"
+                            onclick="clearValidity();" />
+                        <label for="twoWeeks" class="radioLabel">ორ კვირაში ერთხელ</label><br>
+                        <input id="onceMonth" type="radio" class="radioButton" name="onlineMeeting" value="onceMonth"
+                            onclick="clearValidity();" />
+                        <label for="onceMonth" class="radioLabel">თვეში ერთხელ</label><br>
+
+                    </div>
+
+                    <div id="officeDays">
+                        <h1>რა სიხშირით შეიძლება გვქონდეს საერთო არაფორმალური ონლაინ შეხვედრები,
+                            სადაც ყველა სურვილისამებრ ჩაერთვება?*</h1>
+                        <input id="zeroOffice" type="radio" class="radioButton" name="officeDay" value="zeroOffice"
+                            oninvalid="this.setCustomValidity('აირჩიეთ ერთ-ერთი')" onclick="clearValidity1();"
+                            required />
+                        <label for="zeroOffice" class="radioLabel">0</label><br>
+                        <input id="onceOffice" type="radio" class="radioButton" name="officeDay" value="onceOffice"
+                            onclick="clearValidity1();" />
+                        <label for="onceOffice" class="radioLabel">1</label><br>
+                        <input id="twoOffice" type="radio" class="radioButton" name="officeDay" value="twoOffice"
+                            onclick="clearValidity1();" />
+                        <label for="twoOffice" class="radioLabel">2</label><br>
+                        <input id="threeOffice" type="radio" class="radioButton" name="officeDay" value="threeOffice"
+                            onclick="clearValidity1();" />
+                        <label for="threeOffice" class="radioLabel">3</label><br>
+                        <input id="fourOffice" type="radio" class="radioButton" name="officeDay" value="fourOffice"
+                            onclick="clearValidity1();" />
+                        <label for="fourOffice" class="radioLabel">4</label><br>
+                        <input id="fiveOffice" type="radio" class="radioButton" name="officeDay" value="fiveOffice"
+                            onclick="clearValidity1();" />
+                        <label for="fiveOffice" class="radioLabel">5</label><br>
+
+                    </div>
+                    <div>
+                        <label for="comments" class="textareaComment">რას ფიქრობ ფიზიკურ შეკრებებზე?</label><br>
+                        <textarea id="meetings" name="comments" id="comments" cols="80" rows="10"></textarea><br>
+                    </div>
+                    <div>
+                        <label for="comments1" class="textareaComment">რას ფიქრობ არსებულ გარემოზე: რა მოგწონს, რას
+                            დაამატებდი, რას
+                            შეცვლიდი?</label><br>
+                        <textarea id="environment" name="comments1" id="comments1" cols="80" rows="10"></textarea><br>
+                        <button type="submit" id="recomendationsButton">დასრულება</button><br>
+                </form>
+                <button style="border:none; background: none;" class="fas fa-chevron-left" type="button"
+                    id="recomendationsPrevius"></button>
+            </div>
+
+        </div>
+        <div class="column">
+            <div class="rightTop">
+                <h2>4/4</h2>
+                <hr>
+            </div>
+            <img class="topImg imgInmate1" id="heart" src="./img/heart.png" alt=""></img>
+            <img class="backImg imgInmate" id="bike" src="./img/bike2 1.png" alt=""></img>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="row" id="thanks">
+        <div class="thankU">
+            <img id="topDimonds" src="./img/dimonds.png" alt=""><br><br>
+            მადლობა<br>
+            <img id="bottomDimonds" src="./img/dimonds.png" alt="">
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./script.js" type="text/babel"></script>
+</body>
+
+</html>

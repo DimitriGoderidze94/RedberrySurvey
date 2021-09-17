@@ -1,0 +1,318 @@
+html {
+  height: 980px;
+  width: 1800px;
+  margin: 30px;
+}
+
+.rect {
+  margin-top: 220px;
+  margin-left: 50px;
+  position: absolute;
+  height: 75px;
+  width: 700px;
+  background-color: #d6d16e;
+}
+
+.transition1 {
+  transition: opacity 2s;
+}
+.imgInmate1 {
+  opacity: 0.8;
+}
+
+.radioButton {
+  height: 25px;
+  width: 25px;
+}
+
+.circle {
+  margin-top: 210px;
+  margin-left: 60px;
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  background-color: red;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+.fa-hand-point-right {
+  color: orange;
+}
+label {
+  font-size: 25px;
+  margin-left: 50px;
+}
+.radioLabel {
+  margin-left: 0px;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-left: 30px;
+}
+
+body {
+  text-align: center;
+  height: max-content;
+  background-color: #b5c0c7;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.inputContainer {
+  margin-bottom: 15px;
+  max-width: 700px;
+  margin: 20px;
+}
+
+.inputContainer[data-errorName]::after {
+  content: attr(data-errorName);
+  font-size: 25px;
+  border-color: #c92432;
+  color: #c92432;
+  margin-left: 50px;
+  display: block;
+}
+
+input {
+  display: inline-block;
+  border-radius: 4px;
+  border: 3px solid #a8a8a8;
+  height: 50px;
+  width: 500px;
+  margin-left: 50px;
+  font-size: 25px;
+}
+input[type="radio"] {
+  width: 100px;
+}
+
+p {
+  margin: 30px;
+  font-size: 20px;
+  margin-left: 70px;
+}
+
+.button {
+  border: none;
+}
+.buttonContainerNext {
+  margin-right: 30px;
+  position: absolute;
+  bottom: 20px;
+  text-align: start;
+  margin-left: 0px;
+}
+.buttonContainerPrevious {
+  margin-right: 30px;
+  position: absolute;
+  bottom: 20px;
+  margin-right: 30px;
+  right: 0;
+}
+#recomendationsButton {
+  background-color: #208298;
+  border-radius: 42px;
+  right: 0;
+  bottom: 20px;
+  text-align: center;
+  margin-left: 400px;
+  margin-top: 50px;
+  height: 60px;
+  width: 200px;
+  font-size: 30px;
+  color: white;
+  padding: 5px;
+}
+#recomendationsPrevius {
+  margin-top: 30px;
+  margin-left: 810px;
+}
+
+hr {
+  width: 90%;
+  border: 0;
+  height: 2px;
+  background: #000;
+  opacity: 1;
+  margin: 1%;
+}
+#hr1 {
+  width: 50%;
+  margin-left: 70px;
+}
+h2 {
+  text-align: end;
+  margin-right: 10%;
+}
+textarea {
+  margin-left: 30px;
+  border: 1px solid black;
+}
+.textareaComment {
+  margin: 30px;
+}
+
+.fa {
+  margin-left: 0%;
+}
+.center {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.row,
+#introduction {
+  background-color: white;
+  height: 980px;
+  margin: 30px;
+  width: 1800px;
+  display: flex;
+  text-align: left;
+}
+.column {
+  height: 980px;
+  width: 900px;
+  flex: 50%;
+  text-align: left;
+  position: relative;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding: 40px;
+}
+.column::-webkit-scrollbar {
+  display: none;
+}
+
+.backImg {
+  position: relative;
+  top: 0;
+  left: 0;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.topImg {
+  position: absolute;
+  top: 150px;
+  left: 70px;
+  opacity: 0.9;
+}
+
+#bike {
+  width: 750px;
+}
+#heart {
+  top: 250px;
+  left: 150px;
+}
+
+.space {
+  height: 3%;
+}
+.hint {
+  height: 100px;
+  font-size: 30px;
+  margin-left: 70px;
+}
+.redbery {
+  color: red;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: xx-large;
+  font-weight: 1000;
+  text-align: left;
+  margin-left: 70px;
+}
+
+.image2container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 790px;
+  width: 820px;
+}
+.rightTop {
+  top: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 110px;
+}
+
+#introImg {
+  width: 8%;
+  margin-top: 15%;
+  margin-bottom: 2%;
+}
+img {
+  max-width: 100%;
+}
+
+#introduction {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  font-family: "ALK Rounded Nusx Med", sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+#introButton {
+  font-size: 50px;
+  border: none;
+  font-weight: 800;
+  cursor: pointer;
+  background-color: white;
+}
+#introButton:hover {
+  text-shadow: 4px 4px 0 gray;
+}
+#thanks {
+  color: white;
+  background-color: #232323;
+  font-family: "BPG Banner Caps", sans-serif;
+  font-size: 60px;
+  letter-spacing: 20px;
+}
+.thankU {
+  margin-top: 350px;
+  margin-left: 700px;
+  line-height: 50px;
+  font-weight: 900;
+}
+#topDimonds {
+  margin-left: 50px;
+  width: 60px;
+  height: 60px;
+}
+#bottomDimonds {
+  margin-top: 10px;
+  margin-left: 350px;
+  width: 30px;
+  height: 30px;
+}
+.staff {
+  font-size: 30px;
+}
+
+#covid19,
+#test,
+#anti,
+#testResults,
+#testResults,
+#vaccinated,
+#booking,
+#bookingMoh1,
+#bookingMoh2,
+#vaccinatedNumber,
+#notVaccinated,
+#recomendations,
+#thanks,
+#identification {
+  display: none;
+}
