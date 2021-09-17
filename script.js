@@ -159,6 +159,9 @@ $("#yes").click(function () {
 $("#no").click(function () {
   if ($("#no").is(":checked")) {
     info.recovered = "არ აქვს გადატანილი";
+    info.antiTest = "";
+    info.testResult = "";
+    info.testDate = "";
     test.style.display = "none";
     anti.style.display = "none";
     testResults.style.display = "none";
@@ -168,6 +171,9 @@ $("#no").click(function () {
 $("#now").click(function () {
   if ($("#now").is(":checked")) {
     info.recovered = "ახლა აქვს კოვიდი";
+    info.antiTest = "";
+    info.testResult = "";
+    info.testDate = "";
     test.style.display = "none";
     anti.style.display = "none";
     testResults.style.display = "none";
@@ -188,6 +194,8 @@ $("#tYes").click(function () {
 $("#tNo").click(function () {
   if ($("#tNo").is(":checked")) {
     info.antiTest = "არა";
+    info.testDate = "";
+    info.testResult = "";
     anti.style.display = "inline-block";
     testResults.style.display = "none";
   }
@@ -312,6 +320,7 @@ var notVaccinated = document.getElementById("notVaccinated");
 $("#vYes").click(function () {
   if ($("#vYes").is(":checked")) {
     info.vacinated = "ვაქცინირებულია";
+    info.notVaccinatedReason = "";
     vaccinatedNumber.style.display = "inline-block";
     notVaccinated.style.display = "none";
     vaccinatedButton.disabled = true;
@@ -321,6 +330,7 @@ $("#vYes").click(function () {
 $("#vNo").click(function () {
   if ($("#vNo").is(":checked")) {
     info.vacinated = "არ არის ვაქცინირებული";
+    info.vacineDose = "";
     vaccinatedNumber.style.display = "none";
     notVaccinated.style.display = "inline-block";
     vaccinatedButton.disabled = true;
