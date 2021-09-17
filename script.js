@@ -162,6 +162,7 @@ $("#no").click(function () {
     info.antiTest = "";
     info.testResult = "";
     info.testDate = "";
+    info.covidDate = "";
     test.style.display = "none";
     anti.style.display = "none";
     testResults.style.display = "none";
@@ -174,6 +175,7 @@ $("#now").click(function () {
     info.antiTest = "";
     info.testResult = "";
     info.testDate = "";
+    info.covidDate = "მიმდინარე";
     test.style.display = "none";
     anti.style.display = "none";
     testResults.style.display = "none";
