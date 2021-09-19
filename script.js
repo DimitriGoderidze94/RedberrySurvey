@@ -54,6 +54,7 @@ introButton.addEventListener("click", function () {
   introduction.style.display = "none";
   identification.style.display = "inline-block";
   $(".imgInmate").css({ width: 0.0 }).animate({ width: 753 }, 250);
+  $(".rect").css({ width: 0.0 }).animate({ width: 700 }, 250);
 });
 
 var regexName = /^[ა-ჰa-zA-Z]+$/gi;
@@ -149,6 +150,7 @@ var anti = document.getElementById("anti");
 var covid19Form = document.getElementById("covid19Form");
 
 $("#yes").click(function () {
+  // თუ გაქვს გადატანილი კოვიდ19? : მაქვს
   if ($("#yes").is(":checked")) {
     info.recovered = "გადატანილი აქვს";
     test.style.display = "inline-block";
@@ -157,6 +159,7 @@ $("#yes").click(function () {
   }
 });
 $("#no").click(function () {
+  // თუ გაქვს გადატანილი კოვიდ19? : არ მაქვს
   if ($("#no").is(":checked")) {
     info.recovered = "არ აქვს გადატანილი";
     info.antiTest = "";
@@ -170,6 +173,7 @@ $("#no").click(function () {
   }
 });
 $("#now").click(function () {
+  // თუ გაქვს გადატანილი კოვიდ19? : ახლა მაქვს
   if ($("#now").is(":checked")) {
     info.recovered = "ახლა აქვს კოვიდი";
     info.antiTest = "";
@@ -186,6 +190,7 @@ $("#now").click(function () {
 var testResults = document.getElementById("testResults");
 
 $("#tYes").click(function () {
+  // შემთხვევით ანტისხეულების ტესტი ხომ არ გაქვს გაკეთებული? : მაქვს
   if ($("#tYes").is(":checked")) {
     info.antiTest = "დიახ";
     anti.style.display = "none";
@@ -194,6 +199,7 @@ $("#tYes").click(function () {
   }
 });
 $("#tNo").click(function () {
+  // შემთხვევით ანტისხეულების ტესტი ხომ არ გაქვს გაკეთებული? : არ მაქვს
   if ($("#tNo").is(":checked")) {
     info.antiTest = "არა";
     info.testDate = "";
@@ -214,6 +220,7 @@ var numberA = document.getElementById("numberA");
 var numberAError = document.getElementById("numberAError");
 
 dateA.addEventListener("focusout", function () {
+  // ანტისხეულების ტესტის თარიღი
   if (
     dateBError.getAttribute("data-errorName") == "" &&
     numberAError.getAttribute("data-errorName") == "" &&
@@ -242,6 +249,7 @@ dateA.addEventListener("focusout", function () {
 });
 
 numberA.addEventListener("focusout", function () {
+  // ანტისხეულების რაოდენობა
   if (
     dateBError.getAttribute("data-errorName") == "" &&
     dateAError.getAttribute("data-errorName") == "" &&
@@ -272,8 +280,11 @@ numberA.addEventListener("focusout", function () {
 var dateBError = document.getElementById("dateBError");
 
 dateB.addEventListener("focusout", function () {
+  // კოვიდის თარიღი
   if (dateRegex.test(dateB.value) && $("#tNo").is(":checked")) {
     dateBError.setAttribute("data-errorName", "");
+    info.testDate = "";
+    info.testResult = "";
     info.covidDate = dateB.value;
     covid19Button.disabled = false;
   } else if (dateRegex.test(dateB.value)) {
@@ -286,27 +297,12 @@ dateB.addEventListener("focusout", function () {
   }
 });
 
-numberA.addEventListener("focusout", function () {
-  if (
-    dateAError.getAttribute("data-errorName") == "" &&
-    numberRegex.test(numberA.value)
-  ) {
-    info.testResult = numberA.value;
-    info.testDate = dateA.value;
-    anti.style.display = "inline-block";
-  } else if (!numberRegex.test(numberA.value)) {
-    numberAError.setAttribute("data-errorName", "გთხოვთ მიუთითეთ რიცხვი");
-    covid19Button.disabled = true;
-  } else if (numberRegex.test(numberA.value)) {
-    numberAError.setAttribute("data-errorName", "");
-  }
-});
-
 covid19Button.addEventListener("click", function (evt) {
   evt.preventDefault();
   covid19.style.display = "none";
   vaccinated.style.display = "inline-block";
   $(".imgInmate").css({ width: 0.0 }).animate({ width: 753 }, 250);
+  $("#star").css({ width: 0.0 }).animate({ width: 288 }, 250);
 });
 
 covid19Previus.addEventListener("click", function (evt) {
@@ -314,12 +310,14 @@ covid19Previus.addEventListener("click", function (evt) {
   covid19.style.display = "none";
   identification.style.display = "inline-block";
   $(".imgInmate").css({ width: 0.0 }).animate({ width: 753 }, 250);
+  $(".rect").css({ width: 0.0 }).animate({ width: 700 }, 250);
 });
 
 var vaccinatedNumber = document.getElementById("vaccinatedNumber");
 var notVaccinated = document.getElementById("notVaccinated");
 
 $("#vYes").click(function () {
+  // უკვე აცრილი ხარ? დიახ
   if ($("#vYes").is(":checked")) {
     info.vacinated = "ვაქცინირებულია";
     info.notVaccinatedReason = "";
@@ -330,6 +328,7 @@ $("#vYes").click(function () {
   }
 });
 $("#vNo").click(function () {
+  // უკვე აცრილი ხარ? არა
   if ($("#vNo").is(":checked")) {
     info.vacinated = "არ არის ვაქცინირებული";
     info.vacineDose = "";
@@ -402,7 +401,7 @@ vaccinatedButton.addEventListener("click", function (evt) {
   vaccinated.style.display = "none";
   recomendations.style.display = "inline-block";
   $(".imgInmate").css({ width: 0.0 }).animate({ width: 753 }, 250);
-  $(".imgInmate1").css({ opacity: 0.0 }).animate({ opacity: 0.8 }, 250);
+  $("#heart").css({ width: 0.0 }).animate({ width: 196 }, 250);
 });
 
 function clearValidity() {
@@ -452,6 +451,13 @@ document
     console.log(info);
     recomendations.style.display = "none";
     thanks.style.display = "inline-block";
+    $(".thankU").css({ height: 0 }).animate({ height: 50 }, 250);
+    $("#topDimonds")
+      .css({ marginTop: 500, marginLeft: 850 })
+      .animate({ marginTop: 400, marginLeft: 750 }, 500);
+    $("#bottomDimonds")
+      .css({ marginTop: 300, marginLeft: 950 })
+      .animate({ marginTop: 400, marginLeft: 1050 }, 500);
   });
 
 recomendationsPrevius.addEventListener("click", function (evt) {

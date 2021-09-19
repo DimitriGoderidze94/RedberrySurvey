@@ -129,7 +129,7 @@ p {
   padding: 5px;
 }
 #recomendationsPrevius {
-  margin-top: 30px;
+  margin-top: 64px;
   margin-left: 810px;
 }
 
@@ -279,24 +279,30 @@ img {
   font-family: "BPG Banner Caps", sans-serif;
   font-size: 60px;
   letter-spacing: 20px;
+  text-align: left;
 }
 .thankU {
   margin-top: 350px;
-  margin-left: 700px;
-  line-height: 50px;
+  line-height: 2px;
   font-weight: 900;
+  margin-left: 700px;
+  position: fixed;
 }
 #topDimonds {
-  margin-left: 50px;
+  position: absolute;
+  margin-top: 400px;
+  margin-left: 750px;
   width: 60px;
   height: 60px;
 }
 #bottomDimonds {
-  margin-top: 10px;
-  margin-left: 350px;
+  margin-top: 400px;
+  margin-left: 1050px;
   width: 30px;
   height: 30px;
+  position: absolute;
 }
+
 .staff {
   font-size: 30px;
 }
