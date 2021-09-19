@@ -50,6 +50,29 @@ var dateB = document.getElementById("dateB");
 var covid19Previus = document.getElementById("covid19Previus");
 var vaccinated = document.getElementById("vaccinated");
 
+$(document).keypress(function (e) {
+  // enter key
+  var key = e.which;
+  if (key == 13) {
+    if (introduction.style.display !== "none") {
+      $("#introButton").click();
+      return false;
+    } else if (identification.style.display == "inline-block") {
+      $("#identificationNext").click();
+      return false;
+    } else if (covid19.style.display == "inline-block") {
+      $("#covid19Button").click();
+      return false;
+    } else if (vaccinated.style.display == "inline-block") {
+      $("#vaccinatedButton").click();
+      return false;
+    } else if (recomendations.style.display == "inline-block") {
+      $("#recomendationsButton").click();
+      return false;
+    }
+  }
+});
+
 introButton.addEventListener("click", function () {
   introduction.style.display = "none";
   identification.style.display = "inline-block";
